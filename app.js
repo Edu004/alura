@@ -1,9 +1,4 @@
 
-// let titulo = document.querySelector('h1');
-// titulo.innerHTML = 'Jogo do número secreto';
-
-//let paragrafo = document.querySelector('p')
-//paragrafo.innerHTML = 'Escolha um número entre 0 e 10'
 let listaDeNumerosSorteados = []
 let numeroLimite = 10
 let numeroSecreto = gerarNumeroAleatorio()
@@ -50,7 +45,7 @@ function gerarNumeroAleatorio(){
     if(qtdLista == numeroLimite){
         listaDeNumerosSorteados = [];
     }
-    if (listaDeNumerosSorteados.includes(numeroEscolhido)){//verificando na lista o numero escolhido
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)){
         return gerarNumeroAleatorio();
     }else {
         listaDeNumerosSorteados.push(numeroEscolhido);
@@ -71,6 +66,5 @@ function reiniciarJogo(){
     tentativas = 1;
     exibirMensagemInicial()
     document.getElementById('reiniciar').setAttribute('disabled',true)
-//setando o disabled dizendo ser true
 }
 
